@@ -1,8 +1,9 @@
 #include<iostream>
+#include<limits>
 using namespace std;
 
 // Function prototypes
-void getInfo(int&, int&) {
+void getInfo(int &n, int &k) {
   do {
     cout << "How many balls (1-12) are in the pool to pick from?";
     cin >> n;
@@ -32,7 +33,8 @@ long long factorial(int num) {
   return num * factorial(num - 1);
 }
 double computeWays(int n, int k) {
-  return 1.0 / (factorial(n) / (factorial(k) * fcatorial(n-k)));
+  return 1.0 / (factorial(n) / (factorial(k) * factorial(n-k)));
+}
 
 /*******************************************************************
 * getLotteryInfo                                                   *
